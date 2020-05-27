@@ -1,0 +1,20 @@
+server:
+  port: 9100
+
+spring:
+  application:
+    name: app-eureka1
+  security:
+    basic:
+      enable: true #HTTP basic
+    user: 
+      name: user
+      password: 123456
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9100/eureka/
+    register-with-eureka: true
+    fetch-registry: true
