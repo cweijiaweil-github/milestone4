@@ -1,6 +1,6 @@
 <div class="row context-box ">
     <input class="nodisplay" #inputBuyerId type="text" value="{{buyerId}}">
-    <form #filerForm="ngForm" (ngSubmit)="fillerItem(filerForm.value)">
+    <form #filerForm="ngForm" >
     <div class="left-box">
             <div class="left-box-ch">
                 <div class="row">
@@ -199,7 +199,7 @@
                                 <input class="nodisplay" #inputItemName type="text" value="{{item.item_name}}">
                                 <input class="nodisplay" #inputprice type="text" value="{{item.price}}">
                                 <button class="btn btn-primary btn-car" (click)="addToCart(inputItemId.value,inputItemName.value,inputprice.value)">Add to Cart</button>
-                                <button class="btn btn-primary">Check out</button>
+                                <button class="btn btn-primary" (click)="checkOut()">Check out</button>
                             </div>
                         </div>
                     </div>

@@ -8,13 +8,13 @@ spring:
     basic:
       enable: true #HTTP basic
     user: 
-      name: user
+      name: wjw
       password: 123456
 eureka:
   instance:
     hostname: 127.0.0.1
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:9100/eureka/
-    register-with-eureka: true
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:9100/eureka/
+    register-with-eureka: false
     fetch-registry: true

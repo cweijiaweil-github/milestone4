@@ -9,13 +9,13 @@ spring:
 eureka:
   client:
     service-url:
-           defaultZone: http://127.0.0.1:9100/eureka
+           defaultZone: http://wjw:123456@127.0.0.1:9100/eureka
     register-with-eureka: true
     fetch-registry: true
   instance:
-      prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
+      prefer-ip-address: true 
       ip-address: 127.0.0.1
-      instance-id: ${spring.application.name}###${server.port} #指定实例id
+      instance-id: ${spring.application.name}###${server.port} 
 zuul:
   routes: 
     seller-service: 

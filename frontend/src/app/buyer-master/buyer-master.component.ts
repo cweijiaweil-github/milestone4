@@ -58,7 +58,7 @@ export class BuyerMasterComponent implements OnInit {
         this.itemList = arr;
       },
         error => {
-          this.router.navigateByUrl("errPage");
+          // this.router.navigateByUrl("errPage");
         }
       );
     }else{
@@ -95,7 +95,7 @@ export class BuyerMasterComponent implements OnInit {
       this.subCategoryList = arr;
     },
       error => {
-        this.router.navigateByUrl("errPage");
+        // this.router.navigateByUrl("errPage");
       }
     );
   }
@@ -119,7 +119,7 @@ export class BuyerMasterComponent implements OnInit {
         this.itemList = arr;
       },
         error => {
-          this.router.navigateByUrl("errPage");
+          // this.router.navigateByUrl("errPage");
         }
       );
     }
@@ -145,7 +145,7 @@ export class BuyerMasterComponent implements OnInit {
       }
     },
       error => {
-        this.router.navigateByUrl("errPage");
+        // this.router.navigateByUrl("errPage");
       }
     );
   }
@@ -182,9 +182,8 @@ export class BuyerMasterComponent implements OnInit {
       }
     ];
   }
-
-  fillerItem(value: any) {
-    // param this.item_name
+  checkOut(){
+    alert()
   }
   selSubCategory(category: any, subCategory: any) {
     this.category_id = category.category_id;
