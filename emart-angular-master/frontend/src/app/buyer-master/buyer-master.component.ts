@@ -95,7 +95,7 @@ export class BuyerMasterComponent implements OnInit {
       this.subCategoryList = arr;
     },
       error => {
-        // this.router.navigateByUrl("errPage");
+        this.router.navigateByUrl("errPage");
       }
     );
   }

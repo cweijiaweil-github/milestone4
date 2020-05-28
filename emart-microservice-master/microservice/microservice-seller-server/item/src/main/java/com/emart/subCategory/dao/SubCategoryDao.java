@@ -18,8 +18,8 @@ public interface SubCategoryDao extends JpaRepository<SubCategory, String> {
 
 List<SubCategory> findBySellerIdAndCategoryId(String sellerId,String categoryId);
 
-// @Query(value = "select s.*,i.price,i.item_id,i.item_name,i.description from t_sub_category as s,t_category as c,t_item as i where s.sub_category_id = i.subcategory_id and s.category_id = c.category_id and s.sub_category_id  =?1", nativeQuery = true)
-@Query(value = "select s.*,i.*,c.* from t_sub_category as s,t_category as c,t_item as i where s.sub_category_id = i.subcategory_id and s.category_id = c.category_id and s.sub_category_id  =?1", nativeQuery = true)
+@Query(value = "select s.*,i.price,i.item_id,i.item_name,i.description from t_sub_category as s,t_category as c,t_item as i where s.sub_category_id = i.subcategory_id and s.category_id = c.category_id and s.sub_category_id  =?1", nativeQuery = true)
+// @Query(value = "select s.*,i.*,c.* from t_sub_category as s,t_category as c,t_item as i where s.sub_category_id = i.subcategory_id and s.category_id = c.category_id and s.sub_category_id  =?1", nativeQuery = true)
 List<Map<String,Object>> findBySubCategoryId(String subCateoryId);
 
 
